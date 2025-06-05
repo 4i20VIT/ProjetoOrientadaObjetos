@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <!-- ScrollPane contendo uma tabela para selecionar o quarto -->
+      <ScrollPane fx:id="scrollPaneTabelaQuartos" layoutX="39.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tabelaQuartos" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="colNumeroQuarto" prefWidth="101.60004425048828" text="N Quarto" />
+                      <TableColumn fx:id="colClienteQuarto" prefWidth="97.5999755859375" text="Cliente" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      
+      <!-- Rótulo indicando a seleção do quarto -->
+      <Label fx:id="labelSelecaoQuarto" layoutX="39.0" layoutY="35.0" prefHeight="26.0" prefWidth="158.0" text="Selecione o Quarto">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      
+      <!-- Rótulo indicando a seleção do produto -->
+      <Label fx:id="labelSelecaoProduto" layoutX="260.0" layoutY="35.0" prefHeight="26.0" prefWidth="158.0" text="Selecione o Produto">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      
+      <!-- Rótulo indicando a pesquisa -->
+      <Label fx:id="labelPesquisarPor" layoutX="480.0" layoutY="35.0" prefHeight="26.0" prefWidth="87.0" text="Pesquisar por:" />
+      
+      <!-- Botões de seleção para pesquisa por Cliente ou Quarto -->
+      <RadioButton fx:id="radioCliente" layoutX="567.0" layoutY="40.0" mnemonicParsing="false" text="Cliente" />
+      <RadioButton fx:id="radioQuarto" layoutX="633.0" layoutY="40.0" mnemonicParsing="false" text="Quarto" />
+      
+      <!-- Campo de texto para digitar o critério de pesquisa -->
+      <TextField fx:id="textFieldPesquisa" layoutX="480.0" layoutY="66.0" prefHeight="26.0" prefWidth="178.0" />
+      
+      <!-- Botão para confirmar a pesquisa -->
+      <Button fx:id="btnConfirmarPesquisa" layoutX="663.0" layoutY="66.0" mnemonicParsing="false" text="OK" />
+      
+      <!-- ScrollPane contendo uma tabela para selecionar o produto -->
+      <ScrollPane fx:id="scrollPaneTabelaProdutos" layoutX="260.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tabelaProdutos" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="colProduto" prefWidth="102.40011596679688" text="Produto" />
+                      <TableColumn fx:id="colValorProduto" prefWidth="96.7999267578125" text="Valor" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      
+      <!-- Botão para adicionar o produto à conta do quarto -->
+      <Button fx:id="btnAdicionarContaQuarto" layoutX="105.0" layoutY="419.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="510.0" text="Adicionar a Conta do Quarto">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

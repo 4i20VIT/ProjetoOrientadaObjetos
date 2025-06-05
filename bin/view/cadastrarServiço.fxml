@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!-- Botão para voltar à tela anterior -->
+        <Button fx:id="btnVoltar" layoutX="644.0" layoutY="28.0" mnemonicParsing="false" text="Voltar" />
+        
+        <!-- Tabela para exibição dos produtos cadastrados -->
+        <TableView fx:id="tabelaProdutos" layoutX="360.0" layoutY="129.0" prefHeight="390.0" prefWidth="294.0">
+            <columns>
+                <!-- Coluna para o nome do produto -->
+                <TableColumn fx:id="colNomeProduto" prefWidth="152.8" text="Nome do produto" />
+                <!-- Coluna para o valor do produto -->
+                <TableColumn fx:id="colValorProduto" prefWidth="140.8" text="Valor" />
+            </columns>
+        </TableView>
+        
+        <!-- Título para a seção de produtos cadastrados -->
+        <Label fx:id="labelProdutosCadastrados" layoutX="360.0" layoutY="84.0" text="Produtos Cadastrados">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        
+        <!-- Título para a seção de cadastro de produtos -->
+        <Label fx:id="labelCadastrarProduto" layoutX="33.0" layoutY="84.0" prefHeight="35.0" prefWidth="198.0" text="Cadastrar Produto">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        
+        <!-- Campo para o nome do produto -->
+        <Label fx:id="labelNomeProduto" layoutX="33.0" layoutY="129.0" text="Nome do Produto:" />
+        <TextField fx:id="txtNomeProduto" layoutX="33.0" layoutY="147.0" />
+        
+        <!-- Campo para o valor do produto -->
+        <Label fx:id="labelValorProduto" layoutX="33.0" layoutY="180.0" text="Valor:" />
+        <TextField fx:id="txtValorProduto" layoutX="33.0" layoutY="198.0" prefHeight="26.0" prefWidth="70.0" />
+        
+        <!-- Botão para cadastrar um novo produto -->
+        <Button fx:id="btnCadastrarProduto" layoutX="33.0" layoutY="264.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="216.0" text="Cadastrar Produto" />
+        
+        <!-- Botão para excluir um produto cadastrado -->
+        <Button fx:id="btnExcluirProduto" layoutX="33.0" layoutY="346.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="216.0" text="Excluir Produto" />
+    </children>
+</AnchorPane>

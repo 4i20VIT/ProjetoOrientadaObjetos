@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClienteController">
+   <children>
+      <!-- Botão para cadastrar cliente -->
+      <Button fx:id="btnCadastrar" layoutX="48.0" layoutY="422.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="214.0" text="Cadastrar Cliente" onAction="#cadastrarCliente">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+
+      <!-- Tabela para exibição dos clientes -->
+      <TableView fx:id="tabelaClientes" layoutX="307.0" layoutY="122.0" prefHeight="390.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="colNome" prefWidth="84.8" text="Nome" />
+          <TableColumn fx:id="colCpf" prefWidth="104.0" text="CPF" />
+          <TableColumn fx:id="colContato" prefWidth="115.2" text="Contato" />
+          <TableColumn fx:id="colSexo" prefWidth="47.2" text="Sexo" />
+          <TableColumn fx:id="colIdade" prefWidth="52.8" text="Idade" />
+        </columns>
+      </TableView>
+
+      <!-- Label para título -->
+      <Label layoutX="307.0" layoutY="75.0" text="Clientes Cadastrados">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <!-- Campos de entrada -->
+      <TextField fx:id="campoNome" layoutX="30.0" layoutY="140.0" prefHeight="26.0" prefWidth="250.0" />
+      <TextField fx:id="campoCpf" layoutX="30.0" layoutY="198.0" prefHeight="26.0" prefWidth="250.0" />
+      <TextField fx:id="campoDataNasc" layoutX="30.0" layoutY="257.0" prefHeight="26.0" prefWidth="250.0" />
+      <TextField fx:id="campoSexo" layoutX="30.0" layoutY="311.0" prefHeight="26.0" prefWidth="250.0" />
+      <TextField fx:id="campoTelefone" layoutX="30.0" layoutY="368.0" prefHeight="26.0" prefWidth="250.0" />
+
+      <!-- Labels dos campos -->
+      <Label layoutX="35.0" layoutY="122.0" text="Nome:" />
+      <Label layoutX="35.0" layoutY="180.0" text="CPF:" />
+      <Label layoutX="30.0" layoutY="239.0" text="Data de Nascimento:" />
+      <Label layoutX="33.0" layoutY="293.0" text="Sexo:" />
+      <Label layoutX="29.0" layoutY="350.0" text="Telefone:" />
+
+      <!-- Título do formulário -->
+      <Label layoutX="30.0" layoutY="75.0" prefHeight="35.0" prefWidth="213.0" text="Cadastrar Cliente">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <!-- Botão para excluir cliente -->
+      <Button fx:id="btnExcluir" layoutX="48.0" layoutY="486.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="214.0" text="Excluir Cliente" onAction="#excluirCliente">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+
+   </children>
+</AnchorPane>
